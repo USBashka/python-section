@@ -13,19 +13,19 @@ class Money:
     currency: str = rub
 
     def __add__(self, other):
-        if self.currency is other.currency:
+        if self.currency == other.currency:
             return Money(value=self.value+other.value, currency=self.currency)
         else:
             raise NotComparisonException
     
     def __sub__(self, other):
-        if self.currency is other.currency:
+        if self.currency == other.currency:
             return Money(value=self.value-other.value, currency=self.currency)
         else:
             raise NotComparisonException
     
     def __eq__(self, other):
-        if self.currency is other.currency:
+        if self.currency == other.currency:
             return self.value == other.value
         else:
             raise NotComparisonException
