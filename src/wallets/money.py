@@ -65,7 +65,7 @@ class Wallet:
         current = self[money.currency]
         result = current - money
         if result.value < 0:
-            raise NegativeValueException("Resulting money value cannot be negative.")
+            raise NegativeValueException("Resulting money value cannot be negative")
         self[money.currency] = result
         return self
 
